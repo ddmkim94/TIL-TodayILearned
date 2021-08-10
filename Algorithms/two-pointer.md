@@ -14,33 +14,34 @@
 5. 모든 경우를 확인 할 때까지 2~4번 과정을 반복!
 
    ### 그림과 함께 설명하기 🌄
+
+   <br>
+
+   **[관련 문제] : https://www.acmicpc.net/problem/2003**<br>
+
    아래의 그림처럼 하나의 배열이 존재하고 M = 5 를 가진다고 가정해보겠습니다. <br>
-   
+
    - **[초기단계]** : 시작점과 끝점이 첫 번째 인덱스를 가리키도록 합니다. <br><br>
-   ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/1%EB%B2%88.png) <br><br>
-   ▶︎ 현재 부분합 : 1 <br>
-   ▶︎ 현재 카운트 : 0 <br><br>
-   
+     ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/1%EB%B2%88.png) <br><br>
+     ▶︎ 현재 부분합 : 1 <br>
+     ▶︎ 현재 카운트 : 0 <br><br>
+
    - **[1단계]** : 이전 부분합(1) < M --> **`end + 1`** <br><br>
-   ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/2%EB%B2%88.png) <br><br>
-   ▶︎ 현재 부분합 : 3 <br>
-   ▶︎ 현재 카운트 : 0 <br><br>
-   
+     ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/2%EB%B2%88.png) <br><br>
+     ▶︎ 현재 부분합 : 3 <br>
+     ▶︎ 현재 카운트 : 0 <br><br>
+
    - **[2단계]** : 이전 부분합(3) < M --> **`end + 1`** <br><br>
-   ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/3%EB%B2%88.png) <br><br>
-   ▶︎ 현재 부분합 : 6 <br>
-   ▶︎ 현재 카운트 : 0 <br><br>
-   
+     ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/3%EB%B2%88.png) <br><br>
+     ▶︎ 현재 부분합 : 6 <br>
+     ▶︎ 현재 카운트 : 0 <br><br>
+
    - **[3단계]** : 이전 부분합(6) > M --> **`start + 1`** <br><br>
-   ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/4%EB%B2%88.png) <br><br>
-   ▶︎ 현재 부분합 : 5 <br>
-   ▶︎ 현재 카운트 : 1 <br>
+     ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/4%EB%B2%88.png) <br><br>
+     ▶︎ 현재 부분합 : 5 <br>
+     ▶︎ 현재 카운트 : 1 <br>
    - **이런 방식으로 마지막 경우까지 모두 검사를 실시한다** <br><br>
 
    - **[마지막 단계]** <br><br>
-   ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/5%EB%B2%88.png) <br><br>
-   ▶︎ 현재 부분합 : 5 (`검사완료`) <br>
-   
-   
-   
-   
+     ![image](https://github.com/ehdals9412/TIL-TodayILearned/blob/38d3f973a8bdc64de184f4fb9e52c0ac3b579a3a/image/5%EB%B2%88.png) <br><br>
+     ▶︎ 현재 부분합 : 5 (`검사완료`) <br>
