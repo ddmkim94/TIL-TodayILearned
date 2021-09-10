@@ -1,8 +1,8 @@
 # JPA Annotation
 
-**@Repository:** Spring-Boot가 `Component-Scan`을 통해 스프링 빈으로 등록될 수 있게 만들어주는 어노테이션, 실제 JPA와 연동하는 곳
+- **`@Repository:`** Spring-Boot가 `Component-Scan`을 통해 스프링 빈으로 등록될 수 있게 만들어주는 어노테이션, 실제 JPA와 연동하는 곳에서 사용
 
-**@PersistenceContext:** `EntityManager` 주입 어노테이션
+- **`@PersistenceContext:`** `EntityManager` 주입 어노테이션
 
 ```java
 package jpabook.jpashop.repository;
@@ -48,13 +48,15 @@ public class MemberRepository {
 }
 ```
 
-**@Transactional** <br>
+****
+
+- **`@Transactional`** <br>
 ➡️ 해당 클래스의 메서드를 `트랜잭션` 안에서 동작하도록 만들어주고, 성공은 `commit`, 실패는 `rollback` 처리 <br>
 ➡️ 반복 가능한 테스트 지원, 각각의 테스트를 실행할 때마다 트랜잭션을 시작하고 테스트가 끝나면 강제로 롤백`(테스트 케이스에서만 이렇게 동작)`
 
-**@RequiredArgsConstructor:** final 필드들만 모아서 생성자를 생성해주는 Lombok 어노테이션
+- **`@RequiredArgsConstructor:`** final 필드들만 모아서 생성자를 생성해주는 Lombok 어노테이션
 
-**@Autowired** <br>
+- **`@Autowired`** <br>
 ➡️ 스프링 빈을 자동주입해주는 어노테이션 <br>
 ➡️ 필드 주입, 수정자(setter) 주입, 생성자 주입이 있으며 생성자 주입을 가장 많이 사용함 `(생성자가 하나인 경우 @Autowired 생략이 가능)`
 
